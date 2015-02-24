@@ -1,0 +1,16 @@
+[
+{
+  "modid": "hostagemod",
+  "name": "Hostage Mod",
+  "description": "A Hostage Mod",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Ry_dog101"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
