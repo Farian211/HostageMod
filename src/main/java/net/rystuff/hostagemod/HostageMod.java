@@ -24,7 +24,7 @@ public class HostageMod
     public void preInit(FMLPreInitializationEvent event)
     {
         // MinecraftForge.EVENT_BUS.register(new EventHandler());
-        GameRegistry.registerItem(gag, "Gag");
         MinecraftForge.EVENT_BUS.register(new Gag());
+        GameRegistry.registerItem(gag, "Gag");
     }
 }
