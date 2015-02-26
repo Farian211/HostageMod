@@ -7,6 +7,9 @@ public class ItemGag extends Item
 {
     public ItemGag()
     {
-        this.setCreativeTab(CreativeTabs.tabMisc);
+        super();
+        setUnlocalizedName("gag");
+        setTextureName("hostagemod:redGag");
+        setCreativeTab(CreativeTabs.tabMisc);
     }
 }
