@@ -10,6 +10,6 @@ public class ItemHandcuff extends Item
         super();
         setCreativeTab(CreativeTabs.tabMisc);
         setUnlocalizedName("Handcuffs");
-        setTextureName("hostagemod:handcuffs");
+        setTextureName("hostagemod:handcuff");
     }
 }
