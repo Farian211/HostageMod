@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-public class Gag
+public class EventGag
 {
     public static List<UUID> gagged = new ArrayList<UUID>();
 
@@ -21,12 +21,8 @@ public class Gag
     public void onEvent(EntityInteractEvent event)
     {
         if (event.entityPlayer.inventory.getCurrentItem().getItem() == HostageMod.gag)
-        {
             if (event.target instanceof EntityPlayer)
-            {
                 gagged.add(event.target.getUniqueID());
-            }
-        }
     }
 
     @SubscribeEvent
@@ -40,11 +36,9 @@ public class Gag
     }
     
     @SubscribeEvent
-    public void death(LivingDeathEvent event)
+    public void onDeath(LivingDeathEvent event)
     {
         if (gagged.contains(event.entity.getUniqueID()))
-        {
             gagged.remove(event.entity.getUniqueID());
-        }
     }
 }
