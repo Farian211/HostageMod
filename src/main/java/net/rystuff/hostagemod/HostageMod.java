@@ -8,8 +8,8 @@ import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
 import net.rystuff.hostagemod.event.EventGag;
 import net.rystuff.hostagemod.event.EventHandcuff;
-import net.rystuff.hostagemod.items.ItemGag;
-import net.rystuff.hostagemod.items.ItemHandcuff;
+import net.rystuff.hostagemod.item.ItemGag;
+import net.rystuff.hostagemod.item.ItemHandcuff;
 import net.rystuff.hostagemod.proxy.ServerProxy;
 
 @Mod(modid = "hostagemod", name = "Hostage Mod", version = "1.0")
