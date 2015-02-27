@@ -10,6 +10,7 @@ import net.rystuff.hostagemod.event.EventGag;
 import net.rystuff.hostagemod.event.EventHandcuff;
 import net.rystuff.hostagemod.item.ItemGag;
 import net.rystuff.hostagemod.item.ItemHandcuff;
+import net.rystuff.hostagemod.item.ItemRope;
 import net.rystuff.hostagemod.proxy.ServerProxy;
 
 @Mod(modid = "hostagemod", name = "Hostage Mod", version = "1.0")
@@ -22,6 +23,7 @@ public class HostageMod
     
     public static Item gag = new ItemGag();
     public static Item handcuffs = new ItemHandcuff();
+    public static Item rope = new ItemRope()
     
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
@@ -31,5 +33,6 @@ public class HostageMod
         MinecraftForge.EVENT_BUS.register(new EventHandcuff());
         GameRegistry.registerItem(gag, "Gag");
         GameRegistry.registerItem(handcuffs, "Handcuffs");
+        GameRegistry.registerItem(rope, "Rope");
     }
 }
