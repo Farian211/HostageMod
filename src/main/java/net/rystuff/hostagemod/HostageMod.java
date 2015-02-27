@@ -23,7 +23,7 @@ public class HostageMod
     
     public static Item gag = new ItemGag();
     public static Item handcuffs = new ItemHandcuff();
-    public static Item rope = new ItemRope()
+    public static Item rope = new ItemRope();
     
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
