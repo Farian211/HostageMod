@@ -34,7 +34,7 @@ public class EventGag
             FMLCommonHandler.instance().getMinecraftServerInstance().getConfigurationManager().sendChatMsg(new ChatComponentText("<" + event.player.getDisplayName() + "> *muffled noises*"));
         }
     }
-    
+
     @SubscribeEvent
     public void onDeath(LivingDeathEvent event)
     {

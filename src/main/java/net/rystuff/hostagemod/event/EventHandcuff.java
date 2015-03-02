@@ -22,7 +22,7 @@ public class EventHandcuff
             if (event.target instanceof EntityPlayer)
                 handcuffs.add(event.target.getUniqueID());
     }
-    
+
     @SubscribeEvent
     public void attackEntity(AttackEntityEvent event)
     {
@@ -71,7 +71,7 @@ public class EventHandcuff
         if (handcuffs.contains(event.entityPlayer.getUniqueID()))
             event.setCanceled(true);
     }
-    
+
     @SubscribeEvent
     public void onDeath(LivingDeathEvent event)
     {

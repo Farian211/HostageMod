@@ -1,8 +1,6 @@
 package net.rystuff.hostagemod.event;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.player.*;
 import net.minecraftforge.event.world.BlockEvent;
@@ -15,7 +13,7 @@ import java.util.UUID;
 public class EventChairRope
 {
     public static List<UUID> tied = new ArrayList<UUID>();
-    
+
     @SubscribeEvent
     public void onEvent(PlayerInteractEvent event)
     {
@@ -86,7 +84,7 @@ public class EventChairRope
         if (tied.contains(event.entityPlayer.getUniqueID()))
             event.setCanceled(true);
     }
-    
+
     @SubscribeEvent
     public void onDeath(LivingDeathEvent event)
     {

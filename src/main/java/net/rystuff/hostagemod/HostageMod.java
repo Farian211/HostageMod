@@ -25,13 +25,13 @@ public class HostageMod
     public static ServerProxy proxy;
     @Mod.Instance("hostagemod")
     public static HostageMod instance;
-    
+
     public static Item gag = new ItemGag();
     public static Item handcuffs = new ItemHandcuff();
     public static Item rope = new ItemRope();
-    
+
     public static Block chair = new BlockChair();
-    
+
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
