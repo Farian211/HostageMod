@@ -18,9 +18,13 @@ public class EventHandcuff
     @SubscribeEvent
     public void onEvent(EntityInteractEvent event)
     {
-        if (event.entityPlayer.inventory.getCurrentItem().getItem() == HostageMod.handcuffs)
+        if (event.entityPlayer.inventory.getCurrentItem() != null && event.entityPlayer.inventory.getCurrentItem().getItem() == HostageMod.handcuffs)
+        {
             if (event.target instanceof EntityPlayer)
+            {
                 handcuffs.add(event.target.getUniqueID());
+            }
+        }
     }
 
     @SubscribeEvent

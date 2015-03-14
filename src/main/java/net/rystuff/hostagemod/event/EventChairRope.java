@@ -17,20 +17,13 @@ public class EventChairRope
     @SubscribeEvent
     public void onEvent(PlayerInteractEvent event)
     {
-        System.out.println("stuff");
-        if (event.entityPlayer.inventory.getCurrentItem() != null)
+        if (event.entityPlayer.inventory.getCurrentItem() != null && event.entityPlayer.inventory.getCurrentItem().getItem() == HostageMod.rope)
         {
-            if (event.entityPlayer.inventory.getCurrentItem().getItem() == HostageMod.rope)
+            if (event.world.getBlock(event.x, event.y, event.z) == HostageMod.chair)
             {
-                System.out.println("rope clicked");
-                if (event.world.getBlock(event.x, event.y, event.z) == HostageMod.chair)
+                if (event.world.getClosestPlayer(event.x, event.y, event.z, 1.0) != null)
                 {
-                    System.out.println("chair there");
-                    if (event.world.getClosestPlayer(event.x, event.y, event.z, 1.0) != null)
-                    {
-                        System.out.println("player in chair");
-                        tied.add(event.world.getClosestPlayer(event.x, event.y, event.z, 1).getUniqueID());
-                    }
+                    tied.add(event.world.getClosestPlayer(event.x, event.y, event.z, 1).getUniqueID());
                 }
             }
         }

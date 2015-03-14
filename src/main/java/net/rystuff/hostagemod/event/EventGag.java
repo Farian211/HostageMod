@@ -20,9 +20,13 @@ public class EventGag
     @SubscribeEvent
     public void onEvent(EntityInteractEvent event)
     {
-        if (event.entityPlayer.inventory.getCurrentItem().getItem() == HostageMod.gag)
+        if (event.entityPlayer.inventory.getCurrentItem() != null && event.entityPlayer.inventory.getCurrentItem().getItem() == HostageMod.handcuffs)
+        {
             if (event.target instanceof EntityPlayer)
+            {
                 gagged.add(event.target.getUniqueID());
+            }
+        }
     }
 
     @SubscribeEvent
