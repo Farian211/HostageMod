@@ -18,7 +18,7 @@ import net.rystuff.hostagemod.item.ItemHandcuff;
 import net.rystuff.hostagemod.item.ItemRope;
 import net.rystuff.hostagemod.proxy.ServerProxy;
 
-@Mod(modid = "hostagemod", name = "Hostage Mod", version = "0.1.1")
+@Mod(modid = "hostagemod", name = "Hostage Mod", version = "0.1.2")
 public class HostageMod
 {
     @SidedProxy(clientSide = "net.rystuff.hostagemod.proxy.ClientProxy", serverSide = "net.rystuff.hostagemod.proxy.ServerProxy")
