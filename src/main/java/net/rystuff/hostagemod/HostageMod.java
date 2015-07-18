@@ -7,15 +7,14 @@ import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.rystuff.hostagemod.blocks.BlockChair;
 import net.rystuff.hostagemod.entity.EntityMountableBlock;
 import net.rystuff.hostagemod.event.EventChairRope;
 import net.rystuff.hostagemod.event.EventGag;
 import net.rystuff.hostagemod.event.EventHandcuff;
-import net.rystuff.hostagemod.item.ItemGag;
-import net.rystuff.hostagemod.item.ItemHandcuff;
-import net.rystuff.hostagemod.item.ItemRope;
+import net.rystuff.hostagemod.item.*;
 import net.rystuff.hostagemod.proxy.ServerProxy;
 
 @Mod(modid = "hostagemod", name = "Hostage Mod", version = "0.1.2")
@@ -29,6 +28,8 @@ public class HostageMod
     public static Item gag = new ItemGag();
     public static Item handcuffs = new ItemHandcuff();
     public static Item rope = new ItemRope();
+    public static Item key = new ItemKey();
+    public static Item lock = new ItemLock();
 
     public static Block chair = new BlockChair();
 
@@ -42,6 +43,9 @@ public class HostageMod
         GameRegistry.registerItem(gag, "gag");
         GameRegistry.registerItem(handcuffs, "handcuffs");
         GameRegistry.registerItem(rope, "rope");
+        GameRegistry.registerItem(key, "key");
+        GameRegistry.registerItem(lock, "lock");
+        GameRegistry.addShapelessRecipe(new ItemStack(key, 1), new ItemStack(key));
         int entityId = EntityRegistry.findGlobalUniqueEntityId();
         EntityRegistry.registerGlobalEntityID(EntityMountableBlock.class, "mountableBlock", entityId);
         EntityRegistry.registerModEntity(EntityMountableBlock.class, "mountableBlock", entityId, HostageMod.instance, 64, 1, true);
