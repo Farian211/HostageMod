@@ -21,7 +21,7 @@ import net.rystuff.hostagemod.proxy.ServerProxy;
 
 import java.io.IOException;
 
-@Mod(modid = "hostagemod", name = "Hostage Mod", version = "0.1.2", dependencies = "required-after:llibrary@[0.3.0-1.8,)")
+@Mod(modid = "hostagemod", name = "Hostage Mod", version = "0.1.3", dependencies = "required-after:llibrary@[0.3.0-1.8,)")
 public class HostageMod
 {
     @SidedProxy(clientSide = "net.rystuff.hostagemod.proxy.ClientProxy", serverSide = "net.rystuff.hostagemod.proxy.ServerProxy")
@@ -53,7 +53,7 @@ public class HostageMod
 
         try
         {
-            UpdateHelper.registerUpdateChecker(this, "https://github.com/Rydog101/HostageMod/update.json");
+            UpdateHelper.registerUpdateChecker(instance, "https://raw.githubusercontent.com/Rydog101/HostageMod/master/update.json");
         }
         catch (IOException e)
         {
