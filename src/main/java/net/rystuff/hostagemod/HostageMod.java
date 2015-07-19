@@ -11,6 +11,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
@@ -23,7 +24,7 @@ import net.rystuff.hostagemod.event.EventHandler;
 import net.rystuff.hostagemod.item.*;
 import net.rystuff.hostagemod.proxy.ServerProxy;
 
-@Mod(modid = "hostagemod", name = "Hostage Mod", version = "0.1.2")
+@Mod(modid = "hostagemod", name = "Hostage Mod", version = "0.1.2", dependencies = "required-after:llibrary@[0.3.0-1.8,)")
 public class HostageMod
 {
     @SidedProxy(clientSide = "net.rystuff.hostagemod.proxy.ClientProxy", serverSide = "net.rystuff.hostagemod.proxy.ServerProxy")
@@ -52,11 +53,19 @@ public class HostageMod
         GameRegistry.addShapelessRecipe(new ItemStack(handcuffs, 1), new ItemStack(handcuffs));
         GameRegistry.addShapelessRecipe(new ItemStack(handcuffs, 1), new ItemStack(key), new ItemStack(handcuffs));
         int entityId = EntityRegistry.findGlobalUniqueEntityId();
+
+        proxy.preInit();
+    }
+
+    @Mod.EventHandler
+    public void init(FMLInitializationEvent event)
+    {
+        proxy.init();
     }
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
-
+        proxy.postInit();
     }
 }

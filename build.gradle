@@ -4,11 +4,6 @@ buildscript
 	{
         mavenCentral()
         maven
-        {
-            name = "ilexiconn"
-            url = "https://maven.ilexiconn.net"
-        }
-        maven
 		{
             name = "forge"
             url = "http://files.minecraftforge.net/maven"
@@ -36,6 +31,14 @@ minecraft
     version = "1.8-11.14.3.1491"
     runDir = "minecraft"
     mappings = "snapshot_20141130"
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        name = "ilexiconn"
+        url = "http://maven.ilexiconn.net"
+    }
 }
 
 dependencies
