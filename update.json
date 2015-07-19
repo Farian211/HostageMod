@@ -1,0 +1,9 @@
+{
+    "newestVersion": "0.1.3",
+    "versions":
+    {
+        "0.1.1": [ "Initial release" ],
+        "0.1.2": [ "Bug Fix" ]
+    },
+    "updateUrl": "http://github.com/Rydog101/HostageMod",
+    "iconUrl": "" }

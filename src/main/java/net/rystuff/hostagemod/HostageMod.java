@@ -1,10 +1,6 @@
 package net.rystuff.hostagemod;
 
-
-import net.minecraft.block.Block;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.entity.RenderItem;
-import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.ilexiconn.llibrary.common.update.UpdateHelper;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -16,13 +12,14 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraftforge.fml.relauncher.Side;
 import net.rystuff.hostagemod.event.EventChairRope;
 import net.rystuff.hostagemod.event.EventGag;
 import net.rystuff.hostagemod.event.EventHandcuff;
 import net.rystuff.hostagemod.event.EventHandler;
 import net.rystuff.hostagemod.item.*;
 import net.rystuff.hostagemod.proxy.ServerProxy;
+
+import java.io.IOException;
 
 @Mod(modid = "hostagemod", name = "Hostage Mod", version = "0.1.2", dependencies = "required-after:llibrary@[0.3.0-1.8,)")
 public class HostageMod
@@ -53,6 +50,15 @@ public class HostageMod
         GameRegistry.addShapelessRecipe(new ItemStack(handcuffs, 1), new ItemStack(handcuffs));
         GameRegistry.addShapelessRecipe(new ItemStack(handcuffs, 1), new ItemStack(key), new ItemStack(handcuffs));
         int entityId = EntityRegistry.findGlobalUniqueEntityId();
+
+        try
+        {
+            UpdateHelper.registerUpdateChecker(this, "https://github.com/Rydog101/HostageMod/update.json");
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
 
         proxy.preInit();
     }
