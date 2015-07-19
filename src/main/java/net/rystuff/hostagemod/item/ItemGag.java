@@ -9,7 +9,6 @@ public class ItemGag extends Item
     {
         super();
         setUnlocalizedName("gag");
-        setTextureName("hostagemod:redGag");
         setCreativeTab(CreativeTabs.tabMisc);
     }
 }

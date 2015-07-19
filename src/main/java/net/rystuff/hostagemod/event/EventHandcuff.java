@@ -1,10 +1,10 @@
 package net.rystuff.hostagemod.event;
 
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.player.*;
 import net.minecraftforge.event.world.BlockEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.rystuff.hostagemod.HostageMod;
 
 import java.util.ArrayList;
@@ -23,6 +23,13 @@ public class EventHandcuff
             if (event.target instanceof EntityPlayer)
             {
                 handcuffs.add(event.target.getUniqueID());
+            }
+        }
+        if (event.entityPlayer.inventory.getCurrentItem() != null && event.entityPlayer.inventory.getCurrentItem().getItem() == HostageMod.key)
+        {
+            if (event.target instanceof EntityPlayer && handcuffs.contains(event.target.getUniqueID()))
+            {
+                handcuffs.remove(event.target.getUniqueID());
             }
         }
     }

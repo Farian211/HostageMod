@@ -10,6 +10,5 @@ public class ItemRope extends Item
         super();
         setCreativeTab(CreativeTabs.tabMisc);
         setUnlocalizedName("Rope");
-        setTextureName("hostagemod:rope");
     }
 }

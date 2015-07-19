@@ -1,9 +1,9 @@
 package net.rystuff.hostagemod.event;
 
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.player.*;
 import net.minecraftforge.event.world.BlockEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.rystuff.hostagemod.HostageMod;
 
 import java.util.ArrayList;
@@ -12,18 +12,21 @@ import java.util.UUID;
 
 public class EventChairRope
 {
-    public static List<UUID> tied = new ArrayList<UUID>();
+    /**public static List<UUID> tied = new ArrayList<UUID>();
 
     @SubscribeEvent
     public void onEvent(PlayerInteractEvent event)
     {
+        int x = event.pos.getX();
+        int y = event.pos.getY();
+        int z = event.pos.getZ();
         if (event.entityPlayer.inventory.getCurrentItem() != null && event.entityPlayer.inventory.getCurrentItem().getItem() == HostageMod.rope)
         {
-            if (event.world.getBlock(event.x, event.y, event.z) == HostageMod.chair)
+            if (event.world.getBlockState(event.pos).getBlock() == HostageMod.chair)
             {
-                if (event.world.getClosestPlayer(event.x, event.y, event.z, 1.0) != null)
+                if (event.world.getClosestPlayer(x, y, z, 1.0) != null)
                 {
-                    tied.add(event.world.getClosestPlayer(event.x, event.y, event.z, 1).getUniqueID());
+                    tied.add(event.world.getClosestPlayer(x, y, z, 1).getUniqueID());
                 }
             }
         }
@@ -83,5 +86,5 @@ public class EventChairRope
     {
         if (tied.contains(event.entity.getUniqueID()))
             tied.remove(event.entity.getUniqueID());
-    }
+    }**/
 }

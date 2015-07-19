@@ -4,6 +4,11 @@ buildscript
 	{
         mavenCentral()
         maven
+        {
+            name = "ilexiconn"
+            url = "https://maven.ilexiconn.net"
+        }
+        maven
 		{
             name = "forge"
             url = "http://files.minecraftforge.net/maven"
@@ -28,12 +33,14 @@ archivesBaseName = "hostagemod"
 
 minecraft
 {
-    version = "1.7.10-10.13.2.1291"
+    version = "1.8-11.14.3.1491"
     runDir = "minecraft"
+    mappings = "snapshot_20141130"
 }
 
 dependencies
 {
+    compile 'net.ilexiconn.llibrary:LLibrary:0.3.0-1.8:dev'
 }
 
 processResources

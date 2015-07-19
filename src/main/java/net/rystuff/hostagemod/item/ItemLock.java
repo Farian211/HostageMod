@@ -10,7 +10,6 @@ public class ItemLock extends Item
         super();
         setCreativeTab(CreativeTabs.tabMisc);
         setUnlocalizedName("Lock");
-        setTextureName("hostagemod:lock");
         setMaxStackSize(1);
         setHasSubtypes(true);
     }
