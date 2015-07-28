@@ -1,6 +1,7 @@
 package net.rystuff.hostagemod;
 
 import net.ilexiconn.llibrary.common.update.UpdateHelper;
+import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -12,6 +13,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.rystuff.hostagemod.block.BlockChair;
 import net.rystuff.hostagemod.event.EventChairRope;
 import net.rystuff.hostagemod.event.EventGag;
 import net.rystuff.hostagemod.event.EventHandcuff;
@@ -34,6 +36,8 @@ public class HostageMod
     public static Item rope = new ItemRope();
     public static Item key = new ItemKey();
 
+    public static Block chair = new BlockChair();
+
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
@@ -49,6 +53,7 @@ public class HostageMod
         GameRegistry.addShapelessRecipe(new ItemStack(key, 1), new ItemStack(key));
         GameRegistry.addShapelessRecipe(new ItemStack(handcuffs, 1), new ItemStack(handcuffs));
         GameRegistry.addShapelessRecipe(new ItemStack(handcuffs, 1), new ItemStack(key), new ItemStack(handcuffs));
+        GameRegistry.registerBlock(chair, "chair");
         int entityId = EntityRegistry.findGlobalUniqueEntityId();
 
         try
