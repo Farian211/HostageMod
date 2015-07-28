@@ -1,4 +1,4 @@
-package net.rystuff.hostagemod.block;
+package net.rystuff.hostagemod.common.block;
 
 import net.ilexiconn.llibrary.common.block.BlockMountable;
 import net.minecraft.block.material.Material;

@@ -1,9 +1,7 @@
-package net.rystuff.hostagemod.event;
+package net.rystuff.hostagemod.common.event;
 
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraftforge.event.entity.player.*;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.gameevent.*;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent;
 import net.rystuff.hostagemod.HostageMod;
 

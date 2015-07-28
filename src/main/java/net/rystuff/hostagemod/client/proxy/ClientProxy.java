@@ -1,4 +1,4 @@
-package net.rystuff.hostagemod.proxy;
+package net.rystuff.hostagemod.client.proxy;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.RenderItem;
@@ -6,6 +6,7 @@ import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.rystuff.hostagemod.HostageMod;
+import net.rystuff.hostagemod.common.proxy.ServerProxy;
 
 @SideOnly(Side.CLIENT)
 public class ClientProxy extends ServerProxy

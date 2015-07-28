@@ -1,4 +1,4 @@
-package net.rystuff.hostagemod.item;
+package net.rystuff.hostagemod.common.item;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;

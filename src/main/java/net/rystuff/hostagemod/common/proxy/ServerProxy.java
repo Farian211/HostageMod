@@ -1,4 +1,4 @@
-package net.rystuff.hostagemod.proxy;
+package net.rystuff.hostagemod.common.proxy;
 
 public class ServerProxy
 {

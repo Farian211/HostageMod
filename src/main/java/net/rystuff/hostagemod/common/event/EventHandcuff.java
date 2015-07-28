@@ -1,4 +1,4 @@
-package net.rystuff.hostagemod.event;
+package net.rystuff.hostagemod.common.event;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;

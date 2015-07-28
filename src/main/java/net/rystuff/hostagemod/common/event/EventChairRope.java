@@ -1,14 +1,4 @@
-package net.rystuff.hostagemod.event;
-
-import net.minecraftforge.event.entity.living.LivingDeathEvent;
-import net.minecraftforge.event.entity.player.*;
-import net.minecraftforge.event.world.BlockEvent;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.rystuff.hostagemod.HostageMod;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
+package net.rystuff.hostagemod.common.event;
 
 public class EventChairRope
 {

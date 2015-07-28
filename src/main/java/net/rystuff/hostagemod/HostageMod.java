@@ -13,20 +13,23 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.rystuff.hostagemod.block.BlockChair;
-import net.rystuff.hostagemod.event.EventChairRope;
-import net.rystuff.hostagemod.event.EventGag;
-import net.rystuff.hostagemod.event.EventHandcuff;
-import net.rystuff.hostagemod.event.EventHandler;
-import net.rystuff.hostagemod.item.*;
-import net.rystuff.hostagemod.proxy.ServerProxy;
+import net.rystuff.hostagemod.common.block.BlockChair;
+import net.rystuff.hostagemod.common.event.EventChairRope;
+import net.rystuff.hostagemod.common.event.EventGag;
+import net.rystuff.hostagemod.common.event.EventHandcuff;
+import net.rystuff.hostagemod.common.event.EventHandler;
+import net.rystuff.hostagemod.common.item.ItemGag;
+import net.rystuff.hostagemod.common.item.ItemHandcuff;
+import net.rystuff.hostagemod.common.item.ItemKey;
+import net.rystuff.hostagemod.common.item.ItemRope;
+import net.rystuff.hostagemod.common.proxy.ServerProxy;
 
 import java.io.IOException;
 
 @Mod(modid = "hostagemod", name = "Hostage Mod", version = "0.1.3", dependencies = "required-after:llibrary@[0.3.0-1.8,)")
 public class HostageMod
 {
-    @SidedProxy(clientSide = "net.rystuff.hostagemod.proxy.ClientProxy", serverSide = "net.rystuff.hostagemod.proxy.ServerProxy")
+    @SidedProxy(clientSide = "net.rystuff.hostagemod.client.proxy.ClientProxy", serverSide = "net.rystuff.hostagemod.common.proxy.ServerProxy")
     public static ServerProxy proxy;
     @Mod.Instance("hostagemod")
     public static HostageMod instance;
